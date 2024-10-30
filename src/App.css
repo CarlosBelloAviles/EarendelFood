@@ -1,0 +1,126 @@
+.Container {
+  display: grid;
+  grid-template-columns: 17rem 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "Nav Nav "
+    "Header Header "
+    "Aside Main "
+    "Footer Footer ";
+}
+.Nav {
+  background-color: rgb(32, 6, 32);
+  grid-area: Nav;
+}
+
+/* Header Carrucel */
+.Header {
+  grid-area: Header;
+}
+
+.carousel-indicators [data-bs-target] {
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  background-color: beige;
+}
+
+h3 {
+  color: white;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  width: 740px;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Aside */
+
+.section_lateral {
+  grid-area: Aside;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  height: 100%;
+  background-color: darkgray;
+  color: white;
+  text-align: center;
+  gap: 15px;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 95px;
+  font-size: 25px;
+}
+
+.menu__desayuno {
+  background-image: url("./assets/img/desayuno.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.menu_almuerzo {
+  background-image: url("./assets/img/almuerzo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(253, 246, 246);
+}
+
+/*Main*/
+.Main {
+  grid-area: Main;
+  padding: 15px;
+  
+}
+
+/*Food BreakFast */
+
+.Card {
+  position: relative;
+  width: 320px;
+  height: 530px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  background: rgba(71, 16, 71, 0.486);
+}
+
+.Box {
+  position: absolute;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgb(247, 213, 213);
+
+  text-align: center;
+  color: azure;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+}
+.title {
+  color: antiquewhite;
+  font-weight: bold;
+}
+
+/*Footer*/
+
+.footer {
+  grid-area: Footer;
+  background-color: rgb(32, 6, 32);
+  text-align: center;
+}
