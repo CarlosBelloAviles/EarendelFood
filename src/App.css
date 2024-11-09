@@ -1,12 +1,7 @@
 .Container {
-  display: grid;
-  grid-template-columns: 17rem 1fr;
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-areas:
-    "Nav Nav "
-    "Header Header "
-    "Aside Main "
-    "Footer Footer ";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .Nav {
   background-color: rgb(32, 6, 32);
@@ -14,9 +9,6 @@
 }
 
 /* Header Carrucel */
-.Header {
-  grid-area: Header;
-}
 
 .carousel-indicators [data-bs-target] {
   border-radius: 100%;
@@ -41,18 +33,25 @@ h3 {
 /* Aside */
 
 .section_lateral {
-  grid-area: Aside;
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-left: 10px;
   padding-right: 10px;
   align-items: center;
-  height: 100%;
   background-color: darkgray;
   color: white;
+}
+
+.Category {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 0;
+  left: 0;
+  padding-top: 30px;
   text-align: center;
-  gap: 15px;
+  z-index: 100;
+ 
 }
 
 #menu {
@@ -80,18 +79,15 @@ h3 {
 }
 
 /*Main*/
-.Main {
-  grid-area: Main;
-  padding: 15px;
-  
+.MenuContainer{
+  display: flex;
+  height: auto;
 }
 
-/*Food BreakFast */
 
 .Card {
-  position: relative;
+  height: auto;
   width: 320px;
-  height: 530px;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
     inset -5px -5px 5px rgba(255, 255, 255, 0.5),
     5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
@@ -99,28 +95,37 @@ h3 {
   background: rgba(71, 16, 71, 0.486);
 }
 
-.Box {
-  position: absolute;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  border: 1px solid rgb(247, 213, 213);
-
-  text-align: center;
-  color: azure;
-  top: 8px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
+.img {
+  height: 250px;
 }
+
+.cardBody {
+  text-align: center;
+  color: whitesmoke;
+  background-color: rgba(109, 45, 109, 0.678);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 .title {
   color: antiquewhite;
   font-weight: bold;
 }
 
+/*Carrito*/
+.ContainerCart{
+  flex: 1;
+  height: auto;
+}
+.Cart {
+  display: flex;
+  gap: 12px;
+}
+
 /*Footer*/
 
 .footer {
-  grid-area: Footer;
   background-color: rgb(32, 6, 32);
   text-align: center;
+  
 }

@@ -1,31 +1,35 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Navegacion from "./components/Navegacion";
+import Header from "./components/Header";
 
-import Navegacion from './components/Navegacion';
-import Header from './components/Header';
-import Aside from './components/Aside';
-import Main from './Views/Main';
-import Footer from './components/Footer';
-import { useState } from 'react';
-
-
-
+import Main from "./Views/Main";
+import Footer from "./components/Footer";
+import { useState } from "react";
+import CartProvider from "./Context/ContexCart";
+import Cart from "./Views/Cart";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [categoriaSeleccionada , setCategoriaSeleccionada] = useState('Desayuno')
+ 
 
   return (
-   
-    <div className='Container'>
-    <Navegacion/>
-    <Header/>
-    <Aside  onSelectCategoria={setCategoriaSeleccionada}/>
-    <Main categoria={categoriaSeleccionada}/>
-    <Footer/>
+    <div className="Container">
+      <CartProvider>
+        <Navegacion />
+        <Header />
+        
+        <Routes>
+          <Route
+            path="/"
+            element={<Main />}
+          />
+        <Route path="/cart" element={<Cart />} />
+        </Routes>
+        <Footer />
+      </CartProvider>
     </div>
-     
-   
-  )
+  );
 }
 
-export default App
+export default App;
