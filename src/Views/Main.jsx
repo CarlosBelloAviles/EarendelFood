@@ -15,9 +15,9 @@ function Main() {
   return (
     <div className="MenuContainer">
       <Aside onSelectCategoria={setCategoria} />
-      <Row style={{ display: "flex", padding:"20px"}}>
+      <Row style={{ display: "flex", padding:"20px", width:"80%"}}>
         {productosFiltrados.map((opcion) => (
-          <Col key={opcion.id} className="pb-5 " xs={12} lg={4} md={6}>
+          <Col key={opcion.id}  className="pb-4 " xs={12} lg={4} md={6}>
             <BreakFastPage
               id={opcion.id}
               name={opcion.nombre}

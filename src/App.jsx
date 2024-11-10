@@ -11,20 +11,14 @@ import Cart from "./Views/Cart";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
- 
-
   return (
     <div className="Container">
       <CartProvider>
         <Navegacion />
         <Header />
-        
         <Routes>
-          <Route
-            path="/"
-            element={<Main />}
-          />
-        <Route path="/cart" element={<Cart />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </CartProvider>
