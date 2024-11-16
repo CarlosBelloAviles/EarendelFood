@@ -5,7 +5,6 @@ import Header from "./components/Header";
 
 import Main from "./Views/Main";
 import Footer from "./components/Footer";
-import { useState } from "react";
 import CartProvider from "./Context/ContexCart";
 import Cart from "./Views/Cart";
 import { Route, Routes } from "react-router-dom";

@@ -8,8 +8,11 @@ import PolloalLimon from "../img/FoodAlmuerzo/PolloalLimonconPure.jpeg";
 import RissotoChampiñones from "../img/FoodAlmuerzo/RissotoChampiñones.jpeg";
 import SalmonalaPlancha from "../img/FoodAlmuerzo/salmonalaPlancha.jpeg";
 import TallarinesalPesto from "../img/FoodAlmuerzo/TallarinesalPesto.jpeg";
-
-
+import CarnesPremium from "../img/FoodParrilladas/carnespremiun.jpeg";
+import MariscosyPescados from "../img/FoodParrilladas/mariscosypescados.jpeg";
+import MixtaFamiliar from "../img/FoodParrilladas/mixtafamiliar.jpeg";
+import VegetalesyQuesos from "../img/FoodParrilladas/vegetalesyquesos.jpeg";
+import ParrilladaArgentina from "../img/FoodParrilladas/parrilladaArgentina.jpeg";
 
 export const comidas = [
   {
@@ -20,7 +23,7 @@ export const comidas = [
         nombre: "Desayuno Clásico Americano",
         desc: " Huevos revueltos o fritos, tocino crujiente, salchichas, papas hash brown y tostadas. Se sirve con café o jugo de naranja fresco.",
         img: DesayunoAmericano,
-        price: "5.500",
+        price: "5500",
       },
       {
         id: "DES02",
@@ -90,25 +93,37 @@ export const comidas = [
     ],
   },
   {
-    tipo: "Cena",
+    tipo: "Parrilladas",
     opciones: [
       {
-        id: "CE01",
-        nombre: "sopa de verduras",
-        desc: "aaahsjsksks<<<zzzz",
-        img: { DesayunoAmericano },
+        id: "PA01",
+        nombre: "Parrillada de Carnes Premium",
+        desc: "Selección de cortes de carne de alta calidad: ribeye, churrasco, filete mignon y costillas de cerdo, marinados en hierbas frescas y ajo. Se sirve con guarniciones de papas rústicas, chimichurri casero y vegetales asados.",
+        img: CarnesPremium,
       },
       {
-        id: "CE02",
-        nombre: "pescado a la plancha",
-        desc: "<zzzzzaaaajsjs",
-        img: { DesayunoAmericano },
+        id: "PA02",
+        nombre: "Parrillada de Mariscos y Pescado",
+        desc: "Combinación de mariscos como langostinos, pulpo, calamares y filetes de pescado blanco, sazonados con limón, ajo y finas hierbas. Acompañado de una salsa de mantequilla con perejil, ensalada fresca y pan artesanal. ",
+        img: MariscosyPescados,
       },
       {
-        id: "CE03",
-        nombre: "verduras al vapor",
-        desc: "fffethsjs",
-        img: { DesayunoAmericano },
+        id: "PA03",
+        nombre: "Parrillada Mixta Familiar",
+        desc: "Ideal para compartir: incluye carne de res, pollo, chorizo, costillas de cerdo y morcilla. Acompañada de mazorcas de maíz asadas, papas al horno, ensalada verde y salsas variadas (chimichurri, salsa criolla y guacamole).",
+        img: MixtaFamiliar,
+      },
+      {
+        id: "PA04",
+        nombre: "Parrillada de Vegetales y Quesos",
+        desc: "Perfecta para vegetarianos: una mezcla de vegetales frescos (calabacín, pimientos, espárragos, champiñones y berenjena), asados a la parrilla junto a quesos ahumados y halloumi. Se sirve con pan pita, hummus y salsa de yogur con hierbas.",
+        img: VegetalesyQuesos,
+      },
+      {
+        id: "PA05",
+        nombre: "Parrillada Argentina",
+        desc: "Clásica parrillada argentina que incluye cortes tradicionales como bife de chorizo, entraña, tira de asado, chorizo y morcilla. Acompañada de chimichurri, ensalada de papa con huevo y un pan crujiente tipo baguette.",
+        img: ParrilladaArgentina,
       },
     ],
   },

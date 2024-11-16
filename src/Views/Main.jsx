@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BreakFastPage from "../Views/BreakFastPage";
 import { comidas } from "../assets/Utils/FoodData";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Aside from "../components/Aside";
 
 function Main() {
@@ -15,7 +15,7 @@ function Main() {
   return (
     <div className="MenuContainer">
       <Aside onSelectCategoria={setCategoria} />
-      <Row style={{ display: "flex", padding:"20px", width:"80%"}}>
+      <Row className="letterMenu" >
         {productosFiltrados.map((opcion) => (
           <Col key={opcion.id}  className="pb-4 " xs={12} lg={4} md={6}>
             <BreakFastPage

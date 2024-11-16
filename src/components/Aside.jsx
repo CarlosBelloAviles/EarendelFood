@@ -18,10 +18,22 @@ function Aside({ onSelectCategoria }) {
         >
           <h3>Almuerzo</h3>
         </div>
-        <div onClick={() => onSelectCategoria("Cena")}>
+        <div 
+        id="menu"
+        className="menu_parrilladas"
+        onClick={() => onSelectCategoria("Parrilladas")}>
+          <h3>Parrilladas</h3>
+        </div>
+        <div 
+        id="menu"
+        className="menu_postres"
+        onClick={() => onSelectCategoria("Postres")}>
           <h3>Postres</h3>
         </div>
-        <div>
+        <div
+        id="menu"
+        className="menu_licores"
+        >
           <h3>Licores</h3>
         </div>
       </div>

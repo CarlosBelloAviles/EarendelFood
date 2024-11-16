@@ -49,8 +49,16 @@ h3 {
   padding-left: 10px;
   padding-right: 10px;
   align-items: center;
-  background-color: darkgray;
+  background-color: rgb(112, 84, 11);
   color: white;
+  background-clip: padding-box;
+  border-image-slice: 1;
+  border-right: 2px solid;
+  border-image-source: linear-gradient(
+    to right,
+    rgba(223, 5, 5, 1),
+    rgba(235, 244, 60, 1)
+  );
 }
 
 .Category {
@@ -69,9 +77,12 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 240px;
+  width: 90%;
   height: 95px;
   font-size: 25px;
+  box-shadow: inset 5px 5px 5px rgba(44, 49, 54, 0.05),
+    inset -5px -5px 5px rgba(176, 199, 92, 0.5),
+    5px 5px 5px rgba(187, 196, 176, 0.05), -5px -5px 5px rgba(199, 223, 68, 0.5);
 }
 
 .menu__desayuno {
@@ -89,23 +100,56 @@ h3 {
   color: rgb(253, 246, 246);
 }
 
+.menu_parrilladas{
+  background-image: url("./assets/img/parrilladas.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(253, 246, 246);
+}
+
+.menu_postres{
+  background-image: url("./assets/img/postres.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(253, 246, 246);
+}
+
+.menu_licores{
+  background-image: url("./assets/img/licores.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(253, 246, 246);
+}
+
 /*Main*/
 .MenuContainer {
   grid-area: Main;
+ 
   display: flex;
   height: auto;
   width: 100%;
 }
 
+.letterMenu {
+  display: flex;
+  width: 80%;
+  background-image: url("./assets/img/backgrounddd.jpeg");
+  background-position: center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+}
 .Card {
   display: flex;
   height: auto;
-
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
-    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
-    5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 5px 5px 5px rgba(44, 49, 54, 0.05),
+    inset -5px -5px 5px rgba(176, 199, 92, 0.5),
+    5px 5px 5px rgba(187, 196, 176, 0.05), -5px -5px 5px rgba(199, 223, 68, 0.5);
   border-radius: 15px;
-  background: rgba(71, 16, 71, 0.486);
 }
 
 .img {
@@ -115,7 +159,7 @@ h3 {
 .cardBody {
   text-align: center;
   color: whitesmoke;
-  background-color: rgba(109, 45, 109, 0.678);
+  background-color: black;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -135,10 +179,30 @@ h3 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .Cart {
   display: flex;
-  gap: 18px;
- 
+  gap: 50px;
+}
+
+.cartProduct {
+  box-shadow: inset 5px 5px 5px rgba(44, 49, 54, 0.05),
+    inset -5px -5px 5px rgba(176, 199, 92, 0.5),
+    5px 5px 5px rgba(187, 196, 176, 0.05), -5px -5px 5px rgba(199, 223, 68, 0.5);
+}
+
+.cartBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartTotal {
+  background-color: white;
+  height: 350px;
+  box-shadow: inset 5px 5px 5px rgba(44, 49, 54, 0.05),
+    inset -5px -5px 5px rgba(176, 199, 92, 0.5),
+    5px 5px 5px rgba(187, 196, 176, 0.05), -5px -5px 5px rgba(199, 223, 68, 0.5);
 }
 
 /*Footer*/

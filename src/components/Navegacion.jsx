@@ -20,16 +20,16 @@ const Navegacion = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link style={{ color: "white" }} to="/">
+            <Link style={{ color: "white", paddingRight:"8px", textDecoration:"none"}} to="/">
               Home
             </Link>
-            <Nav.Link style={{ color: "white" }} href="#action2">
+            <Link style={{ color: "white", textDecoration:"none" }} href="#action2">
               Link
-            </Nav.Link>
+            </Link>
           </Nav>
-
-          <Form className="d-flex">
-            <Form.Control
+           <Container>
+           <Form className="d-flex justify-content-center " >
+            <Form.Control style={{width:"400px"}}
               type="search"
               placeholder="Search"
               className="me-2"
@@ -37,7 +37,9 @@ const Navegacion = () => {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <Link to="/cart">Carrito </Link>
+           </Container>
+          
+          <Link style={{textDecoration:"none", color:"white",paddingRight:"25px"}} to="/cart">Carrito </Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
