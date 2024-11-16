@@ -13,6 +13,19 @@ import MariscosyPescados from "../img/FoodParrilladas/mariscosypescados.jpeg";
 import MixtaFamiliar from "../img/FoodParrilladas/mixtafamiliar.jpeg";
 import VegetalesyQuesos from "../img/FoodParrilladas/vegetalesyquesos.jpeg";
 import ParrilladaArgentina from "../img/FoodParrilladas/parrilladaArgentina.jpeg";
+import Coulant from "../img/FoodPostres/Coulant.jpg";
+import Tiramisu from "../img/FoodPostres/Tiramisu.jpg";
+import Cheeesecake from "../img/FoodPostres/Cheesecake.jpg";
+import CremeBrulee from "../img/FoodPostres/CremeBrulee.jpg";
+import TartaManzana from "../img/FoodPostres/TartaManzana.jpg";
+import WhiskyEscoces from "../img/FoodLicores/WhiskyEscoces.jpg";
+import TequilaAñejo from "../img/FoodLicores/TequilaAñejo.jpg";
+import Cognac from "../img/FoodLicores/Cognac.jpg";
+import Amaretto from "../img/FoodLicores/Amaretto.jpg";
+import LicorCafe from "../img/FoodLicores/LicorCafe.jpg";
+
+
+
 
 export const comidas = [
   {
@@ -40,7 +53,6 @@ export const comidas = [
         price: "3700",
       },
 
-      
       {
         id: "DES04",
         nombre: "Panqueques de Arandanos",
@@ -54,7 +66,7 @@ export const comidas = [
         desc: " Smoothie espeso hecho con mango, piña y leche de coco, cubierto con coco rallado, rodajas de kiwi, fresas y semillas de lino.",
         img: smothiee,
         price: "3700",
-      }
+      },
     ],
   },
   {
@@ -64,31 +76,31 @@ export const comidas = [
         id: "Al01",
         nombre: "Filete a la Pimienta",
         desc: "Un jugoso corte de carne de res a la parrilla, sellado y bañado en una suave salsa de pimienta negra, acompañada de papas gratinadas y vegetales salteados. Perfecto para los amantes de los sabores intensos y bien equilibrados.",
-        img:  filetePimienta ,
+        img: filetePimienta,
       },
       {
         id: "Al02",
         nombre: "Pollo al Limón con Puré",
         desc: "Pechuga de pollo marinada en jugo de limón y hierbas, asada y acompañada de un suave puré de papas casero y espinacas salteadas en ajo. Una opción ligera pero con sabor vibrante, ideal para un almuerzo equilibrado.",
-        img:  PolloalLimon ,
+        img: PolloalLimon,
       },
       {
         id: "Al03",
         nombre: "Rissoto de Champiñones y Trufas",
         desc: "Cremoso risotto de arroz arborio, infusionado con hongos frescos y un toque de aceite de trufa. Este platillo se adorna con parmesano rallado y perejil fresco, ofreciendo una experiencia única y sofisticada.",
-        img:  RissotoChampiñones ,
+        img: RissotoChampiñones,
       },
       {
         id: "Al04",
         nombre: "Salmón a la Plancha",
         desc: "Filete de salmón fresco cocinado a la perfección, servido sobre una cama de quinoa sazonada con hierbas y acompañado de espárragos al vapor. Un plato saludable y lleno de sabor que combina texturas suaves y crujientes.",
-        img:  SalmonalaPlancha ,
+        img: SalmonalaPlancha,
       },
       {
         id: "Al05",
         nombre: "Tallarines al Pesto con Camarones",
         desc: "Pasta fresca bañada en una salsa de pesto casera, hecha con albahaca, ajo y nueces, acompañada de camarones salteados en mantequilla y un toque de limón. Este plato ofrece un delicioso equilibrio entre sabores herbales y marinos.",
-        img:  TallarinesalPesto,
+        img: TallarinesalPesto,
       },
     ],
   },
@@ -124,6 +136,76 @@ export const comidas = [
         nombre: "Parrillada Argentina",
         desc: "Clásica parrillada argentina que incluye cortes tradicionales como bife de chorizo, entraña, tira de asado, chorizo y morcilla. Acompañada de chimichurri, ensalada de papa con huevo y un pan crujiente tipo baguette.",
         img: ParrilladaArgentina,
+      },
+    ],
+  },
+  {
+    tipo: "Postres",
+    opciones: [
+      {
+        id: "PO01",
+        nombre: "Coulant de Chocolate con Helado de Vainilla",
+        desc: "Un postre clásico de interior líquido y cálido, servido con una bola de helado de vainilla y decorado con frutos rojos frescos y una pizca de azúcar glas.",
+        img: Coulant,
+      },
+      {
+        id: "PO02",
+        nombre: "Tiramisú Tradicional",
+        desc: "Capas de bizcochos empapados en café expreso, intercaladas con una crema de mascarpone suave y espolvoreado de cacao en polvo. Perfecto para los amantes de los postres italianos.",
+        img: Tiramisu,
+      },
+      {
+        id: "PO03",
+        nombre: "Cheesecake de Maracuyá",
+        desc: "Suave tarta de queso con una capa superior de maracuyá fresca, servida con una base de galleta crocante y decorada con frutas tropicales.",
+        img: Cheeesecake,
+      },
+      {
+        id: "PO04",
+        nombre: "Crème Brûlée Clásica",
+        desc: "Cremoso flan de vainilla con una costra de caramelo crujiente en la parte superior, acompañado de una galleta de mantequilla o una ramita de menta.",
+        img: CremeBrulee,
+      },
+      {
+        id: "PO05",
+        nombre: "Tarta Tatin de Manzana con Crema Inglesa",
+        desc: "Tarta invertida de manzana caramelizada, servida tibia con un toque de crema inglesa o helado de canela para contrastar texturas y temperaturas.",
+        img: TartaManzana,
+      },
+    ],
+  },
+  {
+    tipo: "Licores",
+    opciones: [
+      {
+        id: "LI01",
+        nombre: "Whisky Escocés Single Malt",
+        desc: "Ideal para conocedores, este whisky se disfruta solo o con un poco de agua. Algunas opciones populares incluyen Glenfiddich, Macallan o Lagavulin.",
+        img: WhiskyEscoces,
+      },
+      {
+        id: "LI02",
+        nombre: "Tequila Añejo",
+        desc: "Un tequila envejecido con sabores profundos y suaves. Perfecto para servir solo, en las rocas, o como base para cócteles sofisticados como el Tequila Old Fashioned.",
+        img: TequilaAñejo,
+      },
+      {
+        id: "LI03",
+        nombre: "Cognac VSOP",
+        desc: "Un licor elegante, ideal como digestivo después de la cena. Marcas como Hennessy, Remy Martin o Martell son opciones excelentes.",
+        img: Cognac,
+      },
+      {
+        id: "LI04",
+        nombre: "Amaretto",
+        desc: "Licor dulce de almendra perfecto para cócteles como el Amaretto Sour o para servir solo como un toque dulce al final de la comida.",
+        img: Amaretto,
+      },
+      {
+        id: "LI05",
+        nombre: "Licor de Café",
+        desc: "Versátil para usar en postres o cócteles como el Espresso Martini. Opciones como Kahlúa o Tía María son clásicos que no fallan.",
+        img: LicorCafe,
       },
     ],
   },

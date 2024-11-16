@@ -33,6 +33,7 @@ function Aside({ onSelectCategoria }) {
         <div
         id="menu"
         className="menu_licores"
+        onClick={() => onSelectCategoria("Licores")}
         >
           <h3>Licores</h3>
         </div>

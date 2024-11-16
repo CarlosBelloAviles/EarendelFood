@@ -17,7 +17,7 @@ function BreakFastPage(props) {
         <Card.Title className="title">{props.name}</Card.Title>
         <Card.Text className="text">{props.desc} </Card.Text>
         <Card.Text className="text">$ {props.price} </Card.Text>
-        <Button onClick={() => AddCart(props)} variant="primary">
+        <Button onClick={() => AddCart(props)} className="cardBoton">
           Add to Cart
         </Button>
       </Card.Body>

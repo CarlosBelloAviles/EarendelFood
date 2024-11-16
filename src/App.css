@@ -169,6 +169,9 @@ h3 {
   font-weight: bold;
 }
 
+.cardBoton{
+  background-color: rgb(133, 102, 24);
+}
 /*Carrito*/
 .ContainerCart {
   display: flex;
