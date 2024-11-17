@@ -21,6 +21,8 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  
+
   const decrementHandle = (id) => {
     setCart(
       cart

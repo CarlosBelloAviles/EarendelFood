@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { CartContext } from "../Context/ContexCart";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Container } from "react-bootstrap";
 
 const Cart = () => {
-  const { cart, decrementHandle, total } = useContext(CartContext);
+  const { cart,AddCart, decrementHandle, total } = useContext(CartContext);
   return (
     <Container className="ContainerCart">
-      <h2>carrito</h2>
+      <h2 style={{textAlign:"center", color:"white"}}>Carrito</h2>
       <Container className="Cart">
         <div>
           {cart.map((product) => (
@@ -18,7 +18,14 @@ const Cart = () => {
                 <div className="col-md-8">
                   <Card.Body className="cartBody">
                     <Card.Title>{product.name}</Card.Title>
-                    <Card.Text>{product.price}</Card.Text>
+                    <Card.Text>${product.price}</Card.Text>
+                    
+                    <div className="contador">
+                    <Button
+                    onClick={() => {
+                      AddCart(product);
+                    }}
+                    >+</Button>
                     <Card.Text>{product.Quantity}</Card.Text>
                     <Button
                       onClick={() => {
@@ -27,6 +34,8 @@ const Cart = () => {
                     >
                       -
                     </Button>
+                    </div>
+                   
                   </Card.Body>
                 </div>
               </div>
@@ -35,7 +44,7 @@ const Cart = () => {
         </div>
 
         <Container className="cartTotal d-flex justify-content-center">
-          <h4>Total: {total}</h4>
+          <h4>Total: ${total}</h4>
         </Container>
       </Container>
     </Container>
