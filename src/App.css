@@ -90,6 +90,7 @@ h3 {
   box-shadow: inset 5px 5px 5px rgba(44, 49, 54, 0.05),
     inset -5px -5px 5px rgba(176, 199, 92, 0.5),
     5px 5px 5px rgba(187, 196, 176, 0.05), -5px -5px 5px rgba(199, 223, 68, 0.5);
+ cursor:pointer;
   
 
 }

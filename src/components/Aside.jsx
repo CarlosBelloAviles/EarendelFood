@@ -4,6 +4,13 @@ function Aside({ onSelectCategoria }) {
   return (
     <section className="section_lateral">
       <div className="Category">
+      <div
+          id="menu"
+          className="menu__desayuno"
+          onClick={() => onSelectCategoria("Todas")}
+        >
+         <div id="NameCategory"><h3>All</h3></div>
+        </div>
         <div
           id="menu"
           className="menu__desayuno"

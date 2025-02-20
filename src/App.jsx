@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Navegacion from "./components/Navegacion";
-import Header from "./components/Header";
 
 import Main from "./Views/Main";
 import Footer from "./components/Footer";
@@ -14,7 +13,6 @@ function App() {
     <div className="Container">
       <CartProvider>
         <Navegacion />
-        <Header />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/cart" element={<Cart />} />
