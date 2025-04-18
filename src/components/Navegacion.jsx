@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Navegacion = () => {
   return (
     <Navbar expand="lg" className="Nav">
-      <Container fluid>
+      <Container className="containerNav" fluid>
         <Navbar.Brand style={{ color: "white" }} href="#">
           Earendel Food
         </Navbar.Brand>
@@ -20,10 +20,10 @@ const Navegacion = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link style={{ color: "white", paddingRight:"8px", textDecoration:"none"}} to="/">
+            <Link className="Link"  to="/">
               Home
             </Link>
-            <Link style={{ color: "white", textDecoration:"none" }} href="#action2">
+            <Link className="Link"  href="#action2">
               Link
             </Link>
           </Nav>
@@ -39,7 +39,7 @@ const Navegacion = () => {
           </Form>
            </Container>
           
-          <Link style={{textDecoration:"none", color:"white",paddingRight:"25px"}} to="/cart">Carrito </Link>
+          <Link className="LinkCart" to="/cart">Carrito </Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

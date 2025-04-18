@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="Container">
+   <>
       <CartProvider>
         <Navegacion />
         <Routes>
@@ -19,7 +19,7 @@ function App() {
         </Routes>
         <Footer />
       </CartProvider>
-    </div>
+      </>
   );
 }
 

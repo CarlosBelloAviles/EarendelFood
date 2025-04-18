@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { CartContext } from "../Context/ContexCart";
 
-function BreakFastPage(props) {
+function LetterMenu(props) {
   const { AddCart } = useContext(CartContext);
   return (
     <Card className="Card">
@@ -25,4 +25,4 @@ function BreakFastPage(props) {
   );
 }
 
-export default BreakFastPage;
+export default LetterMenu;

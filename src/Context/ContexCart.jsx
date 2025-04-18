@@ -31,7 +31,7 @@ const CartProvider = ({ children }) => {
             ? { ...item, Quantity: item.Quantity - 1 }
             : item
         )
-        .filter((item) => item.Quantity > 0)
+        .filter((item) => item.Quantity > 0)  
     );
   };
 
