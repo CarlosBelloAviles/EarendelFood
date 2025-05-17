@@ -1,17 +1,27 @@
 import { NavLink } from "react-bootstrap";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
+import { RiShoppingCartFill } from "react-icons/ri";
+import { CartContext } from "../Context/ContexCart";
+import logo from '../assets/earendel-logo.svg';
+
 
 const Navegacion = () => {
+  const { cart } = useContext(CartContext);
   return (
+    
     <Navbar expand="lg" className="Nav">
-      <Container className="containerNav" fluid>
+      <Container fluid className="containerNav p-4" >
         <Navbar.Brand style={{ color: "white" }} href="#">
-          Earendel Food
+        <Link className="Link"  to="/">
+        <img src={logo} alt="Earendel Food Logo" style={{ width: '250px'}} />
+            </Link>
+          
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -20,8 +30,8 @@ const Navegacion = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link className="Link"  to="/">
-              Home
+            <Link className="Link"  to="/register">
+              Registrarse
             </Link>
             <Link className="Link"  href="#action2">
               Link
@@ -39,10 +49,12 @@ const Navegacion = () => {
           </Form>
            </Container>
           
-          <Link className="LinkCart" to="/cart">Carrito </Link>
+         <Link className="LinkCart" to="/cart"><RiShoppingCartFill size={24} /> {cart.length}
+</Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+   
   );
 };
 

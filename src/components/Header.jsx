@@ -1,15 +1,14 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import foodheader from "../assets/img/foodheader.png";
-import headerestaurant from "../assets/img/headerestaurant.jpg";
-import headerlicores from "../assets/img/headerlicores.png";
+import { Container } from "react-bootstrap";
 const Header = () => {
   return (
-    <Carousel data-bs-theme="dark" className="Header">
+   
+    <Carousel  data-bs-theme="dark" className="w-100">
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={foodheader}
+          src="/img/foodheader.png"
           alt="First slide"
           style={{ height: "380px" }}
         />
@@ -23,7 +22,7 @@ const Header = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={headerestaurant}
+          src="/img/headerestaurant.jpg"
           alt="Second slide"
           style={{ height: "380px" }}
         />
@@ -43,7 +42,7 @@ const Header = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={headerlicores}
+          src="/img/headerlicores.png"
           alt="Third slide"
           style={{ height: "380px", width: "440px" }}
         />
@@ -57,6 +56,7 @@ const Header = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    
   );
 };
 

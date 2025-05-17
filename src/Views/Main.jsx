@@ -1,30 +1,48 @@
 import React, { useEffect, useState } from "react";
-import { comidas } from "../assets/Utils/FoodData";
-import { Row, Col, Container, } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Aside from "../components/Aside";
 import Header from "../components/Header";
 import LetterMenu from "./LetterMenu";
+import axios from "axios";
 
 function Main() {
+ 
   const [productosFiltrados, setProductosFiltrados] = useState([]);
   const [categoria, setCategoria] = useState("Desayuno");
 
+  
+
   useEffect(() => {
-    /* if (categoria === "Todas") {
-      const AllProduct = comidas.flatMap((comida) => comida.opciones);
-      setProductosFiltrados(AllProduct); */
-    
-      const Filtrados = comidas.find((comida) => comida.tipo === categoria);
-      setProductosFiltrados(Filtrados ? Filtrados.opciones : []);
-    
-  }, [categoria]);
-  return (
-    <div className="Container">
-      <Header />
-      <div className="MenuContainer">
+    const dataFetch = async () => { 
+      try{
+        // Simulando una llamada a la API para obtener los productos
+        const response = await axios.get("/data/FoodData.json");
+        const { comidas } = await response.data;
+       
+        
+       // Filtrar los productos según la categoría seleccionada
+        const Filtrados = comidas.find((comida) => comida.tipo === categoria);
+        setProductosFiltrados(Filtrados ? Filtrados.opciones : []); 
+        
+      }catch(error){
+         console.error("Error al filtrar los productos:", error);
+         setProductosFiltrados([]);
+      }
+     };
+
+    dataFetch()
+   }, [categoria]);
+  
+   return (
+    <>
+     <Header />
+      <Row className="MenuContainer">
+       <Col xs={12} md={2} className="p-0">
         <Aside onSelectCategoria={setCategoria} />
+       </Col>
+       <Col xs={12} md={10} className="P-0">
         <Row className="letterMenu" xs={1} lg={3} md={2}>
-          {productosFiltrados.map((producto) => (
+          {productosFiltrados.length > 0 && productosFiltrados.map((producto) => (
             <Col key={producto.id} className="menuCard pb-4 "  >
               <LetterMenu
                 id={producto.id}
@@ -36,8 +54,10 @@ function Main() {
            </Col>
           ))}
        </Row>
-      </div>
-    </div>
+        </Col>
+      </Row>
+     
+    </>
   );
 }
 

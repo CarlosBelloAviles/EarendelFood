@@ -1,0 +1,44 @@
+ <svg width="220" height="95" viewBox="5 5 220 95" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg {
+        fill: #2B1B1B;
+      }
+      .brand {
+        font-family: 'Playfair Display', serif;
+        font-size: 40px;
+        fill: #D4AF37;
+        letter-spacing: 2px;
+      }
+      .food {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        fill: #ffffff;
+        letter-spacing: 3px;
+      }
+      .icon {
+        stroke: #D4AF37;
+        stroke-width: 2;
+        fill: none;
+      }
+    </style>
+  </defs>
+
+ 
+
+  <!-- Ícono tenedor -->
+  <g transform="translate(20,35)">
+    <line x1="0" y1="0" x2="0" y2="50" class="icon"/>
+    <line x1="-5" y1="0" x2="-5" y2="20" class="icon"/>
+    <line x1="5" y1="0" x2="5" y2="20" class="icon"/>
+    <line x1="0" y1="20" x2="0" y2="50" class="icon"/>
+  </g>
+
+  <!-- Texto -->
+  <text x="60" y="55" class="brand">Earendel</text>
+  <text x="62" y="85" class="food">FOOD</text>
+</svg>
+
+
+
+

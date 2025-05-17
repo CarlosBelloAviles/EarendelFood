@@ -3,21 +3,21 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { CartContext } from "../Context/ContexCart";
 
-function LetterMenu(props) {
+
+function LetterMenu(product) {
   const { AddCart } = useContext(CartContext);
   return (
-    <Card className="Card">
+    <Card className="Card rounded-3">
       <Card.Img
         variant="top"
-        style={{ borderTopRightRadius: "16px", borderTopLeftRadius: "16px" }}
-        src={props.imagen}
-        className="img"
+        src={product.imagen}
+        className="img rounded-top-3"
       />
-      <Card.Body className="cardBody">
-        <Card.Title className="title">{props.name}</Card.Title>
-        <Card.Text className="text">{props.desc} </Card.Text>
-        <Card.Text className="text">$ {props.price} </Card.Text>
-        <Button onClick={() => AddCart(props)} className="cardBoton">
+      <Card.Body className="cardBody rounded-bottom-3">
+        <Card.Title className="title text-info fw-bolder">{product.name}</Card.Title>
+        <Card.Text className="descrpcion text-white">{product.desc} </Card.Text>
+        <Card.Text className="text-white">$ {product.price} </Card.Text>
+        <Button onClick={() => AddCart(product)} className=" btn btn-primary custom-hover ">
           Add to Cart
         </Button>
       </Card.Body>
