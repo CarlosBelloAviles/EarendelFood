@@ -17,12 +17,10 @@ const Navegacion = () => {
     
     <Navbar expand="lg" className="Nav">
       <Container fluid className="containerNav p-4" >
-        <Navbar.Brand style={{ color: "white" }} href="#">
-        <Link className="Link"  to="/">
-        <img src={logo} alt="Earendel Food Logo" style={{ width: '250px'}} />
-            </Link>
-          
+        <Navbar.Brand as={Link} to="/" style={{ color: "white" }} >
+          <img src={logo} alt="Earendel Food Logo"  />
         </Navbar.Brand>
+        
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -30,16 +28,16 @@ const Navegacion = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link className="Link"  to="/register">
-              Registrarse
+            <Link className="Link"  to="/ofertas">
+              Ofertas
             </Link>
             <Link className="Link"  href="#action2">
-              Link
+              Eventos
             </Link>
           </Nav>
            <Container>
            <Form className="d-flex justify-content-center " >
-            <Form.Control style={{width:"400px"}}
+            <Form.Control style={{width:"350px"}}
               type="search"
               placeholder="Search"
               className="me-2"
@@ -48,9 +46,8 @@ const Navegacion = () => {
             <Button variant="outline-success">Search</Button>
           </Form>
            </Container>
-          
-         <Link className="LinkCart" to="/cart"><RiShoppingCartFill size={24} /> {cart.length}
-</Link>
+           <Link className="Link"  to="/register"> Registrarse</Link>
+         <Link className="LinkCart" to="/cart"><RiShoppingCartFill size={24} /> {cart.length}</Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

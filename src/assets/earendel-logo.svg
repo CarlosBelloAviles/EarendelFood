@@ -1,4 +1,4 @@
- <svg width="220" height="95" viewBox="5 5 220 95" xmlns="http://www.w3.org/2000/svg">
+ <svg width="250" height="60" viewBox="5 5 250 60" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .bg {
@@ -8,19 +8,19 @@
         font-family: 'Playfair Display', serif;
         font-size: 40px;
         fill: #D4AF37;
-        letter-spacing: 2px;
+        letter-spacing: 4px;
       }
       .food {
         font-family: 'Montserrat', sans-serif;
-        font-size: 18px;
+        font-size: 15px;
         fill: #ffffff;
-        letter-spacing: 3px;
+        letter-spacing: 4px;
       }
       .icon {
         stroke: #D4AF37;
-        stroke-width: 2;
+        stroke-width: 3;
         fill: none;
-      }
+         }
     </style>
   </defs>
 
@@ -35,8 +35,8 @@
   </g>
 
   <!-- Texto -->
-  <text x="60" y="55" class="brand">Earendel</text>
-  <text x="62" y="85" class="food">FOOD</text>
+  <text x="60" y="46" class="brand">Earendel</text>
+  <text x="60" y="64" class="food">FOOD</text>
 </svg>
 
 

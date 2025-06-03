@@ -1,25 +1,14 @@
 import { createContext, useEffect, useMemo, useState } from "react";
-import Cookies from "js-cookie";
+import { getCartCookies, saveCartCookies } from "../utils/CartCookies";
+
  
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState(() => {
-    try {
-      const storedCart = Cookies.get("cart");
-      return storedCart ? JSON.parse(storedCart) : [];
-    } catch (error) {
-      console.error("Error al leer el carrito de las cookies:", error);
-      return [];
-    }
-  });
+  const [cart, setCart] = useState(getCartCookies);
  
   useEffect(() => {
-    if (cart.length > 0) {
-      Cookies.set("cart", JSON.stringify(cart), { expires: 7 });
-    } else{
-      Cookies.remove("cart");
-    }
+    saveCartCookies(cart);
   }, [cart]);
 
   const AddCart = (product) => {

@@ -17,10 +17,13 @@ function Main() {
       try{
         // Simulando una llamada a la API para obtener los productos
         const response = await axios.get("/data/FoodData.json");
-        const { comidas } = await response.data;
+        const { comidas } =  response.data;
        
+        if( !comidas ) {
+          throw new Error("Error en la solicitud a la API");
+        }
         
-       // Filtrar los productos según la categoría seleccionada
+      // Filtrar los productos según la categoría seleccionada
         const Filtrados = comidas.find((comida) => comida.tipo === categoria);
         setProductosFiltrados(Filtrados ? Filtrados.opciones : []); 
         
