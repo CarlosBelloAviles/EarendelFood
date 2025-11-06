@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Container } from "react-bootstrap";
+import { getImageUrl } from "../utils/imageHelper";
+
 const Header = () => {
   return (
    
@@ -8,7 +10,7 @@ const Header = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/img/foodheader.png"
+          src={getImageUrl("/img/foodheader.png")}
           alt="First slide"
           style={{ height: "380px" }}
         />
@@ -22,7 +24,7 @@ const Header = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/img/headerestaurant.jpg"
+          src={getImageUrl("/img/headerestaurant.jpg")}
           alt="Second slide"
           style={{ height: "380px" }}
         />
@@ -42,7 +44,7 @@ const Header = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/img/headerlicores.png"
+          src={getImageUrl("/img/headerlicores.png")}
           alt="Third slide"
           style={{ height: "380px", width: "440px" }}
         />

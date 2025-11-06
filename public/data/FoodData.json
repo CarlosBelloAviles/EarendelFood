@@ -7,7 +7,7 @@
           "id": "DES01",
           "nombre": "Desayuno Clásico Americano",
           "desc": "Huevos revueltos o fritos, tocino crujiente, salchichas, papas hash brown y tostadas. Se sirve con café o jugo de naranja fresco.",
-          "img": "../img/FoodDesayuno/DesayunoAmericano.jpeg",
+          "img": "/img/FoodDesayuno/DesayunoAmericano.jpeg",
           "price": "5500"
         },
         {
