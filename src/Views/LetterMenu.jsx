@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { CartContext } from "../Context/ContexCart";
+import { getImageUrl } from "../utils/imageHelper";
 
 
 function LetterMenu(product) {
@@ -10,7 +11,7 @@ function LetterMenu(product) {
     <Card className="Card rounded-3">
       <Card.Img
         variant="top"
-        src={product.imagen}
+        src={getImageUrl(product.imagen)}
         className="img rounded-top-3"
       />
       <Card.Body className="cardBody rounded-bottom-3">
