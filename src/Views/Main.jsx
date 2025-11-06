@@ -4,6 +4,7 @@ import Aside from "../components/Aside";
 import Header from "../components/Header";
 import LetterMenu from "./LetterMenu";
 import axios from "axios";
+import { getPublicUrl } from "../utils/imageHelper";
 
 function Main() {
  
@@ -16,7 +17,7 @@ function Main() {
     const dataFetch = async () => { 
       try{
         // Simulando una llamada a la API para obtener los productos
-        const response = await axios.get("/data/FoodData.json");
+        const response = await axios.get(getPublicUrl("/data/FoodData.json"));
         const { comidas } =  response.data;
        
         if( !comidas ) {

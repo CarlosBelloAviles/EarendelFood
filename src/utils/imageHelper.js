@@ -1,4 +1,4 @@
-export const getImageUrl = (path) => {
+export const getPublicUrl = (path) => {
   // Si la ruta ya empieza con http o https, la dejamos como está
   if (path.startsWith('http')) return path;
   
@@ -10,3 +10,6 @@ export const getImageUrl = (path) => {
   
   return `${basePath}/${cleanPath}`;
 };
+
+// Alias para mantener compatibilidad
+export const getImageUrl = getPublicUrl;
